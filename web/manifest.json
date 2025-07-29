@@ -1,0 +1,35 @@
+{
+    "name": "edupilot_web",
+    "short_name": "edupilot_web",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0175C2",
+    "theme_color": "#0175C2",
+    "description": "EduPilot LMS.",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "icons/edu (1).png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/edu.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/edu (3).png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/edu (2).png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}
