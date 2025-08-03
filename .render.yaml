@@ -1,0 +1,7 @@
+services:
+  - type: static
+    name: edupilot-web
+    env: static
+    branch: master
+    buildCommand: ""
+    staticPublishPath: build/web
