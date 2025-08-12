@@ -24,7 +24,7 @@ class _AdminLoginState extends State<AdminLogin> {
     if (!_formKey.currentState!.validate()) return;
     setState(() => _isLoading = true);
 
-    final url = Uri.parse('https://your-backend-url/api/admin/login/');
+    final url = Uri.parse('https://edupilot-backend-f5sa.onrender.com/api/token/');
     try {
       final response = await http
           .post(
@@ -38,9 +38,10 @@ class _AdminLoginState extends State<AdminLogin> {
           .timeout(const Duration(seconds: 10));
 
       final data = jsonDecode(response.body);
-      if (response.statusCode == 200 && data['token'] != null) {
+      if (response.statusCode == 200 && data['access'] != null) {
         final prefs = await SharedPreferences.getInstance();
-        await prefs.setString('jwt_token', data['token']);
+        await prefs.setString('access_token', data['access']);
+        await prefs.setString('refresh_token', data['refresh']);
 
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(content: Text("Login successful")),
