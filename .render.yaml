@@ -12,7 +12,7 @@ services:
     buildCommand: |
       pip install -r requirements.txt
       python manage.py migrate
-    startCommand: "gunicorn edupilot_backend.wsgi:application"
+    startCommand: "gunicorn edupilot_web_backend.wsgi:application"
     envVars:
       - key: SECRET_KEY
         value: e67t3&)wwf1gjx4y82z_%-o6_ppg+$^)(&w9jmj(bggjyd35!$
