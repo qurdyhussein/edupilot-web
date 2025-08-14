@@ -11,6 +11,7 @@ services:
     env: python
     buildCommand: |
       pip install -r requirements.txt
+      python manage.py migrate accounts zero
       python manage.py migrate accounts
     startCommand: "gunicorn edupilot_web_backend.wsgi:application"
     envVars:
